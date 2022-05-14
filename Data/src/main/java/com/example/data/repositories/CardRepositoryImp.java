@@ -11,6 +11,9 @@ import com.example.domain.repositories.CardRepository;
 
 import java.util.List;
 
+import javax.inject.Singleton;
+
+@Singleton
 public class CardRepositoryImp implements CardRepository {
 
     CardDAO cardDAO;

@@ -8,6 +8,9 @@ import com.example.data.mappers.ToCardForDailyGuess;
 import com.example.domain.dtos.CardForDailyGuess;
 import com.example.domain.repositories.CardForDailyGuessRepository;
 
+import javax.inject.Singleton;
+
+@Singleton
 public class CardForDailyGuessRepositoryImp implements CardForDailyGuessRepository {
     CardWithDescriptionDAO cardWithDescriptionDAO;
 
