@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Tarot&amp;Oracle2</string>
+    <string name="boi_hang_ngay">Bói Bài Hàng Ngày</string>
+    <string name="bo_bai">Bộ Bài</string>
+    <string name="huong_dan_trai_bai">Hướng Dẫn Trải Bài</string>
+    <string name="about_us">About Us</string>
+    <string name="chon_chu_de">Vui lòng chọn chủ đề bạn quan tâm</string>
+    <string name="chon_so_la">Vui lòng chọn số lá bài</string>
+    <string name="cach_doc">Cách đọc bài tarot </string>
+    <string name="phat_trien">Ứng dụng được phát triển bởi Vũ Minh Hiếu</string>
+    <string name="la_bai_cua_ban">Lá bài của bạn là:</string>
+
+    <string name="chu_de1">Sức Khỏe</string>
+    <string name="chu_de2">Tài Chính</string>
+    <string name="chu_de3">Tình Cảm</string>
+    <string name="chu_de4">Công Việc</string>
+    <string name="chu_de5">Tinh Thần</string>
+
+    <string name="la1">1 Lá</string>
+    <string name="la2">2 Lá</string>
+    <string name="la3">3 Lá</string>
+    <string name="la4">4 Lá</string>
+    <string name="la5">5 Lá</string>
+    <string name="la6">6 Lá</string>
+    <string name="la7">7 Lá</string>
+
+    <string name="bam_de_boc">Bấm vào lá bài</string>
+</resources>

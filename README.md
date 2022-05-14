@@ -1,0 +1,2 @@
+# TarotOracle2
+ Tarot
