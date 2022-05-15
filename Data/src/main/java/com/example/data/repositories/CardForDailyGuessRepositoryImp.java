@@ -8,19 +8,22 @@ import com.example.data.mappers.ToCardForDailyGuess;
 import com.example.domain.dtos.CardForDailyGuess;
 import com.example.domain.repositories.CardForDailyGuessRepository;
 
+import javax.inject.Inject;
 import javax.inject.Singleton;
 
-@Singleton
 public class CardForDailyGuessRepositoryImp implements CardForDailyGuessRepository {
+
     CardWithDescriptionDAO cardWithDescriptionDAO;
+    ToCardForDailyGuess cardForDailyGuess;
 
-    ToCardForDailyGuess toCardForDailyGuess;
 
-    public CardForDailyGuessRepositoryImp(Application application, ToCardForDailyGuess toCardForDailyGuess){
-        TarotAndOracleDb db =TarotAndOracleDb.getInstance(application);
-        this.cardWithDescriptionDAO = db.cardWithDescriptionDAO();
-        this.toCardForDailyGuess = toCardForDailyGuess;
+    @Inject
+    public CardForDailyGuessRepositoryImp(CardWithDescriptionDAO cardWithDescriptionDAO,ToCardForDailyGuess cardForDailyGuess) {
+        this.cardWithDescriptionDAO = cardWithDescriptionDAO;
+        this.cardForDailyGuess = cardForDailyGuess;
     }
+
+
 
 //    @Override
 //    public List<CardForDailyGuess> getAllCardWithDescription() {
@@ -29,7 +32,7 @@ public class CardForDailyGuessRepositoryImp implements CardForDailyGuessReposito
 
     @Override
     public CardForDailyGuess getCardWithDescriptionByID(Long id, Long subject_id) {
-        return toCardForDailyGuess.toCardForDailyGuess(cardWithDescriptionDAO.getCardWithDescriptionByID(id, subject_id));
+        return cardForDailyGuess.toCardForDailyGuess(cardWithDescriptionDAO.getCardWithDescriptionByID(id, subject_id));
     }
 
 //    @Override

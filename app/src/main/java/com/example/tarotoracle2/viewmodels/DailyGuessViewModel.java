@@ -5,6 +5,8 @@ import android.app.Application;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.ViewModel;
 
 import com.example.domain.dtos.CardForDailyGuess;
 import com.example.domain.usecases.GetCardForDailyGuessUseCase;
@@ -13,24 +15,26 @@ import javax.inject.Inject;
 
 import dagger.Provides;
 import dagger.hilt.android.AndroidEntryPoint;
+import dagger.hilt.android.lifecycle.HiltViewModel;
 
-@AndroidEntryPoint
-public class DailyGuessViewModel extends AndroidViewModel {
+@HiltViewModel
+public class DailyGuessViewModel extends ViewModel {
     @Inject
     GetCardForDailyGuessUseCase cardForDailyGuessUseCase;
-    public LiveData<CardForDailyGuess> cardForDailyGuessLiveData;
+
+    public MutableLiveData<CardForDailyGuess> cardForDailyGuessLiveData;
 
 
     @Inject
     public DailyGuessViewModel(@NonNull Application application, GetCardForDailyGuessUseCase cardForDailyGuessUseCase) {
-        super(application);
         this.cardForDailyGuessUseCase = cardForDailyGuessUseCase;
+        cardForDailyGuessLiveData = new MutableLiveData<>();
     }
     public void initCard(Long id) {
-        cardForDailyGuessLiveData = cardForDailyGuessUseCase.GetCardForDailyGuess(id,1L);
+        cardForDailyGuessLiveData.postValue(cardForDailyGuessUseCase.GetCardForDailyGuess(id,1L).getValue());
     }
 
-    public LiveData<CardForDailyGuess> getCardForDailyGuessLiveData() {
+    public MutableLiveData<CardForDailyGuess> getCardForDailyGuessLiveData() {
         return cardForDailyGuessLiveData;
     }
 }

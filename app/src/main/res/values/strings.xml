@@ -9,6 +9,9 @@
     <string name="cach_doc">Cách đọc bài tarot </string>
     <string name="phat_trien">Ứng dụng được phát triển bởi Vũ Minh Hiếu</string>
     <string name="la_bai_cua_ban">Lá bài của bạn là:</string>
+    <string name="chon_bo_bai">Chọn Bộ Bài</string>
+    <string name="rider_waite">Rider Waite Tarot</string>
+    <string name="roman_angel_oracle">Romance Angels Oracle</string>
 
     <string name="chu_de1">Sức Khỏe</string>
     <string name="chu_de2">Tài Chính</string>

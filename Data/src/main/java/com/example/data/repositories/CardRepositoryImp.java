@@ -11,6 +11,7 @@ import com.example.domain.repositories.CardRepository;
 
 import java.util.List;
 
+import javax.inject.Inject;
 import javax.inject.Singleton;
 
 @Singleton
@@ -22,6 +23,7 @@ public class CardRepositoryImp implements CardRepository {
 
     private ToCardEntity toCardEntity;
 
+    @Inject
     public CardRepositoryImp(Application application, ToCardDTO toCardDTO, ToCardEntity toCardEntity) {
         TarotAndOracleDb db = TarotAndOracleDb.getInstance(application);
         this.cardDAO = db.cardDAO();

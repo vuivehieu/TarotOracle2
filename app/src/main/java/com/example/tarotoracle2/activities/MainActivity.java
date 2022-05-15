@@ -24,6 +24,9 @@ import soup.neumorphism.NeumorphButton;
 @AndroidEntryPoint
 public class MainActivity extends AppCompatActivity {
     NeumorphButton btnBoiHangNgay;
+    NeumorphButton btnBoBai;
+    NeumorphButton btnHuongDanTraiBai;
+    NeumorphButton btnAboutUs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
                 gotoDailyGuess();
             }
         });
+
     }
 
     private void gotoDailyGuess() {
@@ -45,6 +49,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void initComponents() {
         btnBoiHangNgay = findViewById(R.id.btnBoiHangNgay);
+        btnBoBai = findViewById(R.id.btnBoBai);
+        btnHuongDanTraiBai = findViewById(R.id.btnHuongDanTraiBai);
+        btnAboutUs = findViewById(R.id.btnAboutUs);
+
     }
 
 }

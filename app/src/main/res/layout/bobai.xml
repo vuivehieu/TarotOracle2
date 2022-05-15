@@ -11,70 +11,43 @@
         style="@style/Widget.Neumorph.TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="cursive"
-        android:text="Tarot&amp;Oracle"
-        android:textSize="60dp"
+        android:layout_marginTop="-125dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/chon_bo_bai"
+        android:textSize="48sp"
         android:textStyle="bold" />
+
     <LinearLayout
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:orientation="vertical">
 
         <soup.neumorphism.NeumorphButton
-            android:id="@+id/btnBoiHangNgay"
+
+            android:id="@+id/btnRiderWaite"
             style="@style/Widget.Neumorph.Button"
             android:layout_width="350dp"
             android:layout_height="100dp"
             android:layout_marginLeft="28dp"
-            android:text="@string/boi_hang_ngay"
+            android:text="@string/rider_waite"
             android:textAlignment="center"
             android:textStyle="bold"
-            app:neumorph_backgroundColor="@color/design_default_color_on_primary" />
-        <soup.neumorphism.NeumorphButton
-            android:id="@+id/btnBoBai"
-
-            android:text="@string/bo_bai"
             app:neumorph_backgroundColor="@color/design_default_color_on_primary"
-            android:textStyle="bold"
-
-            android:layout_width="350dp"
-            android:layout_height="100dp"
-            android:layout_marginLeft="28dp"
-            style="@style/Widget.Neumorph.Button"
-
             />
+
         <soup.neumorphism.NeumorphButton
-            android:id="@+id/btnHuongDanTraiBai"
+
+            android:id="@+id/btnRomanceAngelOracle"
+            android:text="@string/roman_angel_oracle"
             app:neumorph_backgroundColor="@color/design_default_color_on_primary"
-
-            android:text="@string/huong_dan_trai_bai"
-
-            android:textAlignment="center"
             android:textStyle="bold"
-
-            android:layout_width="350dp"
-            android:layout_height="100dp"
-            android:layout_marginLeft="28dp"
-            style="@style/Widget.Neumorph.Button"
-
-            />
-        <soup.neumorphism.NeumorphButton
-            android:id="@+id/btnAboutUs"
-            app:neumorph_backgroundColor="@color/design_default_color_on_primary"
-
-            android:text="@string/about_us"
-
-            android:textAlignment="center"
-            android:textStyle="bold"
-
             android:layout_width="350dp"
             android:layout_height="100dp"
             android:layout_marginLeft="28dp"
             style="@style/Widget.Neumorph.Button"
             />
-
 
     </LinearLayout>
-
 </LinearLayout>

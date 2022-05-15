@@ -4,9 +4,13 @@ import com.example.data.daos.CardDAO;
 import com.example.data.entities.CardWithDescription;
 import com.example.domain.dtos.CardForDailyGuess;
 
+import javax.inject.Inject;
+
 public class ToCardForDailyGuess {
+
     CardDAO cardDAO;
-    ToCardForDailyGuess(CardDAO cardDAO){
+    @Inject
+    public ToCardForDailyGuess(CardDAO cardDAO){
         this.cardDAO = cardDAO;
     }
 
