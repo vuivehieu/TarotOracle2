@@ -28,4 +28,6 @@
     <string name="la7">7 Lá</string>
 
     <string name="bam_de_boc">Bấm vào lá bài</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

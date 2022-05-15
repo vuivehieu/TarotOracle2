@@ -1,6 +1,7 @@
 package com.example.tarotoracle2.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.room.Room;
 
 import android.content.Intent;
@@ -13,6 +14,7 @@ import com.example.data.entities.CardEntity;
 import com.example.data.entities.DeckEntity;
 import com.example.data.entities.SubjectEntity;
 import com.example.tarotoracle2.R;
+import com.example.tarotoracle2.fragments.main_menuFragment;
 
 import java.sql.Date;
 import java.time.LocalDate;
@@ -23,36 +25,23 @@ import soup.neumorphism.NeumorphButton;
 
 @AndroidEntryPoint
 public class MainActivity extends AppCompatActivity {
-    NeumorphButton btnBoiHangNgay;
-    NeumorphButton btnBoBai;
-    NeumorphButton btnHuongDanTraiBai;
-    NeumorphButton btnAboutUs;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mainmenu);
         initComponents();
-        btnBoiHangNgay.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                gotoDailyGuess();
-            }
-        });
-
     }
 
-    private void gotoDailyGuess() {
-            Intent intent = new Intent(MainActivity.this, DailyGuessActivity.class);
-            startActivity(intent);
-    }
+
 
     private void initComponents() {
-        btnBoiHangNgay = findViewById(R.id.btnBoiHangNgay);
-        btnBoBai = findViewById(R.id.btnBoBai);
-        btnHuongDanTraiBai = findViewById(R.id.btnHuongDanTraiBai);
-        btnAboutUs = findViewById(R.id.btnAboutUs);
 
+
+        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        fragmentTransaction.add(R.id.fragment_container,new main_menuFragment());
+        fragmentTransaction.commit();
     }
 
 }

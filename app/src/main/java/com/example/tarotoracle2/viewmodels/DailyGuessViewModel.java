@@ -31,6 +31,7 @@ public class DailyGuessViewModel extends ViewModel {
         cardForDailyGuessLiveData = new MutableLiveData<>();
     }
     public void initCard(Long id) {
+        cardForDailyGuessLiveData.setValue(cardForDailyGuessUseCase.GetCardForDailyGuess(id,1L).getValue());
         cardForDailyGuessLiveData.postValue(cardForDailyGuessUseCase.GetCardForDailyGuess(id,1L).getValue());
     }
 
