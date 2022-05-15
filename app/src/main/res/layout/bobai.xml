@@ -27,6 +27,7 @@
         <soup.neumorphism.NeumorphButton
 
             android:id="@+id/btnRiderWaite"
+            android:onClick="goToRider"
             style="@style/Widget.Neumorph.Button"
             android:layout_width="350dp"
             android:layout_height="100dp"

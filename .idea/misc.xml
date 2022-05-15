@@ -6,14 +6,18 @@
         <entry key="..\:/Work/Android/TarotOracle2/app/src/main/res/drawable/mybutton.xml" value="0.1215" />
         <entry key="..\:/Work/Android/TarotOracle2/app/src/main/res/font/aguafina_script.xml" value="0.28020833333333334" />
         <entry key="..\:/Work/Android/TarotOracle2/app/src/main/res/layout/abc1.xml" value="0.25" />
+        <entry key="..\:/Work/Android/TarotOracle2/app/src/main/res/layout/abc2.xml" value="0.14356884057971014" />
         <entry key="..\:/Work/Android/TarotOracle2/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
         <entry key="..\:/Work/Android/TarotOracle2/app/src/main/res/layout/bobai.xml" value="0.264" />
         <entry key="..\:/Work/Android/TarotOracle2/app/src/main/res/layout/chonchude.xml" value="0.264" />
         <entry key="..\:/Work/Android/TarotOracle2/app/src/main/res/layout/chonsola.xml" value="0.264" />
+        <entry key="..\:/Work/Android/TarotOracle2/app/src/main/res/layout/deck_detail.xml" value="0.4" />
         <entry key="..\:/Work/Android/TarotOracle2/app/src/main/res/layout/fragment_1.xml" value="0.25" />
         <entry key="..\:/Work/Android/TarotOracle2/app/src/main/res/layout/fragment_2.xml" value="0.25" />
         <entry key="..\:/Work/Android/TarotOracle2/app/src/main/res/layout/fragment_main_menu.xml" value="0.25" />
         <entry key="..\:/Work/Android/TarotOracle2/app/src/main/res/layout/mainmenu.xml" value="0.25" />
+        <entry key="..\:/Work/Android/TarotOracle2/app/src/main/res/layout/single_card.xml" value="0.264" />
+        <entry key="..\:/Work/Android/TarotOracle2/app/src/main/res/layout/single_deck.xml" value="0.25" />
         <entry key="..\:/Work/Android/TarotOracle2/app/src/main/res/layout/suckhoe.xml" value="0.264" />
       </map>
     </option>

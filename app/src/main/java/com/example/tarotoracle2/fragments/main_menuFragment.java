@@ -58,6 +58,16 @@ public class main_menuFragment extends Fragment {
                 fragmentTransaction.commit();
             }
         });
+        btnBoBai.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+                fragmentTransaction.addToBackStack("");
+                fragmentTransaction.replace(R.id.fragment_container,new chon_bo_baiFragment());
+                fragmentTransaction.commit();
+            }
+        });
+
 
     }
 

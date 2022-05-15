@@ -44,4 +44,17 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.commit();
     }
 
+    public void goToRider(View v){
+        switch(v.getId()) {
+            case R.id.btnRiderWaite:
+                Intent intent = new Intent(MainActivity.this,DeckDetailActivity.class);
+                startActivity(intent);
+                // for ex: your package name can be "com.example"
+                // your activity name will be "com.example.Contact_Developer"
+                startActivity(intent);
+                break;
+        }
+
+    }
+
 }

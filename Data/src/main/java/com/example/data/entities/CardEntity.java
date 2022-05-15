@@ -29,20 +29,31 @@ public class CardEntity {
     @ColumnInfo(name = "updated_date")
     private Date updated_date;
 
+    @ColumnInfo(name = "deck_id")
+    private Long card_deck_id;
 
-    public CardEntity(@NonNull Long card_id, String card_name, String card_description, String card_image, Date created_date, Date updated_date) {
+
+    public CardEntity(@NonNull Long card_id, String card_name, String card_description, String card_image, Date created_date, Date updated_date, Long card_deck_id) {
         this.card_id = card_id;
         this.card_name = card_name;
         this.card_description = card_description;
         this.card_image = card_image;
         this.created_date = created_date;
         this.updated_date = updated_date;
+        this.card_deck_id = card_deck_id;
     }
 
     public CardEntity() {
     }
 
 
+    public Long getCard_deck_id() {
+        return card_deck_id;
+    }
+
+    public void setCard_deck_id(Long card_deck_id) {
+        this.card_deck_id = card_deck_id;
+    }
 
     public Long getCard_id() {
         return card_id;

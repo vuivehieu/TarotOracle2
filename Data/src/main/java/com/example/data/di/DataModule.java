@@ -5,13 +5,19 @@ import android.util.Log;
 
 import com.example.data.daos.CardDAO;
 import com.example.data.daos.CardWithDescriptionDAO;
+import com.example.data.daos.DeckWithCardDAO;
 import com.example.data.database.TarotAndOracleDb;
+import com.example.data.mappers.ToCardDTO;
 import com.example.data.mappers.ToCardForDailyGuess;
-import com.example.data.mappers.ToCardForDailyGuess_Factory;
+import com.example.data.mappers.ToDeckDTO;
 import com.example.data.repositories.CardForDailyGuessRepositoryImp;
+import com.example.data.repositories.DeckRepositoryImp;
 import com.example.domain.repositories.CardForDailyGuessRepository;
+import com.example.domain.repositories.DeckRepository;
 import com.example.domain.usecases.GetCardForDailyGuessUseCase;
+import com.example.domain.usecases.GetDeckByIDUseCase;
 import com.example.domain.usecasesimp.GetCardForDailyGuessUseCaseImp;
+import com.example.domain.usecasesimp.GetDeckByIDUseCaseImp;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
@@ -50,6 +56,36 @@ public class DataModule {
     @Provides
     public ToCardForDailyGuess getToCardForDailyGuess(TarotAndOracleDb appDB){
         return new ToCardForDailyGuess(appDB.cardDAO());
+    }
+
+    @Singleton
+    @Provides
+    public ToDeckDTO getToDeckDTO(ToCardDTO toCardDTO){
+        return new ToDeckDTO(toCardDTO);
+    }
+
+    @Singleton
+    @Provides
+    public ToCardDTO getToCardDTO(){
+        return new ToCardDTO();
+    }
+
+    @Singleton
+    @Provides
+    public DeckWithCardDAO getDeckWithCardDAO(TarotAndOracleDb appDB){
+        return appDB.deckWithCardDAO();
+    }
+
+    @Singleton
+    @Provides
+    public DeckRepository getDeckRepository(DeckWithCardDAO deckWithCardDAO,CardDAO cardDAO , ToDeckDTO toDeckDTO){
+        return new DeckRepositoryImp(deckWithCardDAO,cardDAO,toDeckDTO);
+    }
+
+    @Singleton
+    @Provides
+    public GetDeckByIDUseCase getDeckByIDUseCase(DeckRepository deckRepository){
+        return new GetDeckByIDUseCaseImp(deckRepository);
     }
 
 

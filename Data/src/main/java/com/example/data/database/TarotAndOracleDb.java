@@ -10,6 +10,7 @@ import androidx.room.TypeConverters;
 import com.example.data.daos.CardDAO;
 import com.example.data.daos.CardWithDescriptionDAO;
 import com.example.data.daos.DeckDAO;
+import com.example.data.daos.DeckWithCardDAO;
 import com.example.data.daos.SubjectDAO;
 import com.example.data.entities.CardDescriptionBySubject;
 import com.example.data.entities.CardEntity;
@@ -22,6 +23,7 @@ import com.example.data.typeconverters.DateConverter;
 public abstract class TarotAndOracleDb extends RoomDatabase{
     public abstract CardDAO cardDAO();
     public abstract DeckDAO deckDAO();
+    public abstract DeckWithCardDAO deckWithCardDAO();
     public abstract SubjectDAO subjectDAO();
     public abstract CardWithDescriptionDAO cardWithDescriptionDAO();
 
@@ -29,7 +31,7 @@ public abstract class TarotAndOracleDb extends RoomDatabase{
 
     public static TarotAndOracleDb getInstance(final Context context){
         if(INSTANCE==null){
-            INSTANCE = Room.databaseBuilder(context.getApplicationContext(),TarotAndOracleDb.class,"tarotandoracledb.db").createFromAsset("database/tarotandoracledb").allowMainThreadQueries().build();
+            INSTANCE = Room.databaseBuilder(context.getApplicationContext(),TarotAndOracleDb.class,"tarotandoracledb.db").createFromAsset("database/tarotandoracledb2").allowMainThreadQueries().build();
         }
         return INSTANCE;
     }

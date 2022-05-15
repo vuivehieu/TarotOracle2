@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class ToCardDTO {
-    ToCardDTO(){}
+    public ToCardDTO(){}
 
     public CardDTO transform(CardEntity cardEntity){
         CardDTO cardDTO = new CardDTO();
